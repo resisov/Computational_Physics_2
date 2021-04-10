@@ -10,7 +10,7 @@ void hw5()
 	double a = 0.;
 	double b = 1.;
 	double an = 2.17886;
-
+	double n = 0.01;
 
 	// simpson search
 	for (double h=0.1;h>=0.0001;h*=0.1)

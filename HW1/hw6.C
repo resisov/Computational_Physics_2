@@ -23,6 +23,7 @@ void hw6()
 	{
         	sim = sim +  h*(((2. / 3.) * f(a+(2*i*h))) + (4. / 3.) *f((a+((2*i-1)*h))));
 	}
+	sim = sim + h *(1./3.)*(f(a)-f(b));
         printf("an = %f (H),\t sim = %f (H),\t difference = %f (H)\n",an,sim,an-sim);
 
 
