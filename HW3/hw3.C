@@ -4,7 +4,7 @@
 #define bet 0.5
 #define a 1.0
 #define b 1.0
-#define h 3.141592/5.
+#define h 3.141592/10.
 
 
 double fx(double vn, double t)
@@ -164,7 +164,7 @@ void hw3()
 
 
         TGraph *Dsol1 = new TGraph(N,t_arr,x_crit_arr); Dsol1 ->Draw("APC");
-	Dsol1 ->SetMinimum(-100.0);
+	Dsol1 ->SetMinimum(-2.0);
 	Dsol1 ->SetMaximum(2.0);
 	TGraph *Dsol2 = new TGraph(N,t_arr,x_undr_arr);
         TGraph *Dsol3 = new TGraph(N,t_arr,x_over_arr);
