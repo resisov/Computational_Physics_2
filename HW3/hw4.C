@@ -24,6 +24,7 @@ void hw4()
 	double fn;
 	int n;
 
+	// Euler method loop
         for (n = 0 ; n < N ; n++ )
         {
                 t = n*h;
@@ -36,8 +37,12 @@ void hw4()
 		th1 = th2;
 		
         }
+
+	// parameter initialization
 	o1 = 0.;
 	th1 = 3.141592/5.;
+
+	// Modified Euler method loop
         for (n = 0 ; n < N ; n++ )
         {
                 t = n*h;
@@ -51,7 +56,8 @@ void hw4()
 
         }
 
-        TGraph *Dsol1 = new TGraph(N,t_arr,Om_arr); Dsol1 ->Draw("APC");
+	// Visualization
+        TGraph *Dsol1 = new TGraph(N,t_arr,Om_arr); Dsol1 ->Draw("ACP");
         Dsol1 ->SetMinimum(-5.0);
         Dsol1 ->SetMaximum(5.0);
         TGraph *Dsol2 = new TGraph(N,t_arr,Th_arr);

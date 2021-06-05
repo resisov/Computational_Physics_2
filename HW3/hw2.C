@@ -10,7 +10,7 @@ void hw2()
 {
         double y2,x;
 	double y1=1;
-	double a=0., b=1., alp=1./2.,bet=1./2.;  // Heun Method
+	double a=0.25, b=0.75, alp=2./3.,bet=2./3.;  // Heun Method
 	double h = 0.2;
 	double N = 1 / h; // number of iterations
 	double fn;
