@@ -13,13 +13,13 @@ void hw5()
 	for (int n=0;n<(5*10e+5/100);n++)
 	{
 		t = n*h ;
-                Na_arr[n] = abs(Na);
-                Nb_arr[n] = abs(Nb);
-                Nc_arr[n] = abs(Nc);
+                Na_arr[n] = Na;
+                Nb_arr[n] = Nb;
+                Nc_arr[n] = Nc;
                 T_arr[n] = t;
 		Na = Na -h*la*Na;
-		Nb = Nb -h*(la*Na + lb*Nb);
-		Nc = Nc -h*(lb*Nb);
+		Nb = Nb -h*(-la*Na + lb*Nb);
+		Nc = Nc +h*(lb*Nb);
 	}
 	
 	// visualization
