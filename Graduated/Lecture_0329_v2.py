@@ -27,7 +27,7 @@ def fitFunction(histo,minx,maxx):
     # Gaussian fitting
     popt, pcov = curve_fit(gaussian, hist_plx, hist_ply, p0=[1, mu, sigma])
     print("Gaussian fitting parameters:",popt)
-    print("Gaussian fitting covariance:",pcov)
+    #print("Gaussian fitting covariance:",pcov)
     A = popt[0]
     mu = popt[1]
     sigma = popt[2]
@@ -80,7 +80,6 @@ def process(file):
     hist_plx, A, mu, sigma = fitFunction(histo,740,840)
 
     # Gaussian fitting plot
-    print(A,mu,sigma)
     plt.plot(hist_plx, gaussian(hist_plx, A, mu, sigma),
         color='green', label='fit: a=%5.2f, b=%5.2f, c=%5.2f' % tuple([A,mu,sigma]), linewidth=2)
 
